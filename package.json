@@ -1,5 +1,5 @@
 {
-  "name": "react-starter",
+  "name": "next-portfolio",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -18,6 +18,6 @@
     "start": "NODE_ENV=production node server.js",
     "import": "node ./scripts/import.js"
   },
-  "author": "",
+  "author": "brandon reid",
   "license": "ISC"
 }
