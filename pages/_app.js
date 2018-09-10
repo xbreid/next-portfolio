@@ -4,6 +4,12 @@ import { MuiThemeProvider } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import JssProvider from 'react-jss/lib/JssProvider';
 import getPageContext from '../utils/getPageContext';
+import Header from "../components/header";
+import config from 'react-reveal/globals';
+import { PageTransition } from 'next-page-transitions'
+
+config({ ssrFadeout: true });
+
 
 class Layout extends React.Component {
 
@@ -11,12 +17,12 @@ class Layout extends React.Component {
     const { children } = this.props;
 
     return (
-      <div className='main'>
-        {/*<Header/>*/}
-        {children}
-        {/*<FooterTop />*/}
-        {/*<Footer />*/}
-      </div>
+      <PageTransition timeout={300} classNames="page-transition">
+        <div className='app'>
+          <Header/>
+          {children}
+        </div>
+      </PageTransition>
     )
   }
 }
