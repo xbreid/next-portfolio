@@ -1,0 +1,262 @@
+.button_base {
+    margin: 0;
+    border: 0;
+    font-size: 18px;
+    position: relative;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-user-select: none;
+    cursor: default;
+}
+
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    animation-delay: 1s;
+}
+
+/* ### ### ### 07 */
+.b_3d_double_roll {
+    perspective: 500px;
+    -webkit-perspective: 500px;
+    -moz-perspective: 500px;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+}
+
+.b_3d_double_roll div {
+    position: absolute;
+    text-align: center;
+    padding: 10px;
+    border: #000000 solid 1px;
+    pointer-events: none;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+.b_3d_double_roll div:nth-child(1) {
+    color: #000000;
+    background-color: #ffffff;
+    z-index: 0;
+    width: 100%;
+    height: 50px;
+    clip: rect(0px, 100px, 50px, 0px);
+    position: absolute;
+    transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    transform: rotateX(0deg);
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    transform-origin: 50% 50% -25px;
+    -webkit-transform-origin: 50% 50% -25px;
+    -moz-transform-origin: 50% 50% -25px;
+}
+
+.b_3d_double_roll div:nth-child(2) {
+    color: #000000;
+    background-color: #000000;
+    z-index: -1;
+    width: 100%;
+    height: 50px;
+    clip: rect(0px, 100px, 50px, 0px);
+    position: absolute;
+    transform: rotateX(90deg);
+    -webkit-transform: rotateX(90deg);
+    -moz-transform: rotateX(90deg);
+    transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    transform-origin: 50% 50% -25px;
+    -webkit-transform-origin: 50% 50% -25px;
+    -moz-transform-origin: 50% 50% -25px;
+}
+
+.b_3d_double_roll div:nth-child(3) {
+    color: #000000;
+    background-color: #ffffff;
+    z-index: 0;
+    width: 100%;
+    height: 50px;
+    clip: rect(0px, 200px, 50px, 100px);
+    position: absolute;
+    transition: all 0.2s ease 0.1s;
+    -webkit-transition: all 0.2s ease 0.1s;
+    -moz-transition: all 0.2s ease 0.1s;
+    transform: rotateX(0deg);
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    transform-origin: 50% 50% -25px;
+    -webkit-transform-origin: 50% 50% -25px;
+    -moz-transform-origin: 50% 50% -25px;
+}
+
+.b_3d_double_roll div:nth-child(4) {
+    color: #000000;
+    background-color: #000000;
+    z-index: -1;
+    width: 100%;
+    height: 50px;
+    clip: rect(0px, 200px, 50px, 100px);
+    position: absolute;
+    transform: rotateX(-90deg);
+    -webkit-transform: rotateX(-90deg);
+    -moz-transform: rotateX(-90deg);
+    transition: all 0.2s ease 0.1s;
+    -webkit-transition: all 0.2s ease 0.1s;
+    -moz-transition: all 0.2s ease 0.1s;
+    transform-origin: 50% 50% -25px;
+    -webkit-transform-origin: 50% 50% -25px;
+    -moz-transform-origin: 50% 50% -25px;
+}
+
+.b_3d_double_roll:hover div:nth-child(1) {
+    background-color: #000000;
+    transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    transform: rotateX(-90deg);
+    -webkit-transform: rotateX(-90deg);
+    -moz-transform: rotateX(-90deg);
+}
+
+.b_3d_double_roll:hover div:nth-child(2) {
+    color: #ffffff;
+    transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    transform: rotateX(0deg);
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+}
+
+.b_3d_double_roll:hover div:nth-child(3) {
+    background-color: #000000;
+    transition: all 0.2s ease 0.1s;
+    -webkit-transition: all 0.2s ease 0.1s;
+    -moz-transition: all 0.2s ease 0.1s;
+    transform: rotateX(90deg);
+    -webkit-transform: rotateX(90deg);
+    -moz-transform: rotateX(90deg);
+}
+
+.b_3d_double_roll:hover div:nth-child(4) {
+    color: #ffffff;
+    transition: all 0.2s ease 0.1s;
+    -webkit-transition: all 0.2s ease 0.1s;
+    -moz-transition: all 0.2s ease 0.1s;
+    transform: rotateX(0deg);
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+}
+
+button {
+    letter-spacing: 1px;
+    background: none;
+    color: white;
+    position: relative;
+    outline: none;
+    border: none;
+    height: 50px;
+    width: 190px;
+    font-size: 14px;
+    z-index: 2;
+    transition: .01s .23s ease-out all;
+    overflow: hidden;
+}
+button:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: #202020;
+    z-index: -1;
+    transition: .3s ease-in all;
+}
+button:after {
+    content: '';
+    position: absolute;
+    left: -5%;
+    top: 5%;
+    height: 90%;
+    width: 5%;
+    background: white;
+    z-index: -1;
+    transition: .4s .02s ease-in all;
+}
+button:hover {
+    cursor: pointer;
+    color: transparent;
+    border: 1px solid #333;
+}
+button:hover:before {
+    left: 100%;
+    width: 25%;
+}
+button:hover:after {
+    left: 100%;
+    width: 70%;
+}
+button:hover .icon-right.after:after {
+    left: -80px;
+    color: #333;
+    transition: .2s .2s ease all;
+}
+button:hover .icon-right.after:before {
+    left: -104px;
+    top: 14px;
+    opacity: 0.2;
+    color: white;
+}
+
+.icon-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.icon-right:after {
+    font-family: "FontAwesome";
+    content: '\2192';
+    font-size: 28px;
+    display: inline-block;
+    position: relative;
+    top: 26px;
+    right: 26px;
+    -webkit-transform: translate3D(0, -50%, 0);
+    transform: translate3D(0, -50%, 0);
+}
+.icon-right.after:after {
+    left: -250px;
+    color: black;
+    transition: .15s .25s ease left, .5s .05s ease color;
+}
+.icon-right.after:before {
+    content: '';
+    position: absolute;
+    left: -230px;
+    top: 14px;
+    opacity: 0;
+    transition: .2s ease-in all;
+}
+
+.signature {
+    position: fixed;
+    font-family: sans-serif;
+    font-weight: 100;
+    bottom: 10px;
+    left: 0;
+    letter-spacing: 4px;
+    font-size: 10px;
+    width: 100vw;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+}

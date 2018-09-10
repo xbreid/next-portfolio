@@ -1,0 +1,686 @@
+html {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    background: -webkit-linear-gradient(#ebece7, white);
+    background: linear-gradient(#ebece7, white);
+    margin: 0;
+    width: 100%;
+    font-family: 'Raleway', sans-serif;
+}
+
+#__next, .app {
+    width: 100%;
+}
+
+.container {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+@media (max-width: 990px) {
+    .container {
+        max-width: 850px;
+    }
+}
+
+@media (min-width: 990px) {
+    .container {
+        max-width: 850px;
+    }
+}
+
+@media (min-width: 1300px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1500px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+/*.FullPage div:first-child {*/
+    /*display: inline-block;*/
+/*}*/
+
+.banner-container {
+    position: absolute;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    left: 45%;
+    top: 50%;
+    max-width: 1200px;
+}
+
+.title {
+    font-weight: 800;
+    text-align: left;
+    color: transparent;
+    font-size: 17vh;
+    background: url("https://phandroid.s3.amazonaws.com/wp-content/uploads/2014/05/rainbow-nebula.jpg") repeat;
+    background-position: 40% 50%;
+    -webkit-background-clip: text;
+    position: relative;
+    line-height: 13vh;
+    letter-spacing: -8px;
+    margin-bottom: 1.8rem;
+}
+
+@media (max-width: 750px) {
+    .title {
+        font-size: 21vw;
+        line-height: 17vw;
+    }
+}
+
+.subtitle {
+    padding-top: 10px;
+    text-align: left;
+}
+
+.line-break {
+    display: inline-block;
+    margin-top: 1.8rem;
+    margin-bottom: 1.8rem;
+}
+
+.line-break span {
+    display: block;
+    width: 60px;
+    height: 2px;
+    border-radius: 5px;
+    background: #333;
+}
+
+.line-break span:first-child {
+    margin-bottom: 1.4rem;
+}
+
+.line-break span:last-child {
+    margin-left: 54px;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.display-none {
+    display: none;
+}
+
+.scrollDown {
+    position: fixed;
+    font-size: 0.8rem;
+    bottom: 80px;
+    left: 40px;
+    line-height: 1;
+    letter-spacing: 0.3em;
+    -webkit-writing-mode: vertical-rl;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    color: #333;
+    z-index: 100;
+    transform: translateY(0%);
+    -moz-transition: transform 1s;
+    -webkit-transition: transform 1s;
+    transition: transform 1s;
+
+}
+
+.scrollDown::after {
+    content: "";
+    width: 2px;
+    height: 64px;
+    background: #333;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: -80px;
+}
+
+.scrollDown-disabled {
+    transform: translateY(180%);
+}
+
+.Typist {
+    font-size: 48px;
+    margin-left: 7px;
+    line-height: 30px;
+}
+
+@media(max-width: 576px) {
+    .scrollDown {
+        left: auto;
+        bottom: 45px;
+        right: 15px;
+    }
+
+    .Typist {
+        font-size: 28px;
+    }
+
+    .title {
+        margin-bottom: 0.8rem;
+    }
+}
+
+.Typist .Cursor {
+    display: inline-block;
+}
+.Typist .Cursor--blinking {
+    opacity: 1;
+    animation: blink 1s linear infinite;
+}
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.top-card {
+    position: absolute;
+    width: 50%;
+    height: 75%;
+    top:13%;
+    right: 10%;
+    background: transparent !important;
+    /*background: linear-gradient(#ebece7, white);*/
+    /*background: url(https://cosmic-s3.imgix.net/33104310-a0a2-11e8-9e25-b1e8af26b2ab-a60d7d70-a006-11e8-84a4-37d4a48f091f-FuelTankerTruck.jpeg) no-repeat;*/
+    /*background-position: 70% 50%;*/
+    /*background-size: cover;*/
+    /*filter: brightness(90%);*/
+    z-index: 300;
+}
+
+.top-card img {
+    width: 100%;
+    height: 100%;
+    object-position: 70% 50%;
+    object-fit: cover;
+    filter: brightness(90%);
+    -webkit-box-shadow: 0 80px 140px -40px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 80px 140px -40px rgba(0, 0, 0, 0.6);
+
+}
+
+.space-card, .space-card-tac, .space-card-about, .space-card-contact {
+    width: 50%;
+    height: 75%;
+    top: 13%;
+    background: url('../images/rainbow-nebula.jpg') repeat;
+    position: absolute;
+    right: 10%;
+    margin: -3% -3% 0 auto;
+}
+
+.content {
+    margin-left: 11%;
+    top: 25%;
+    position: absolute;
+    z-index: 400;
+    min-width: 500px;
+}
+
+.content h1 {
+    font-size: 11vh;
+    line-height: 8vh;
+    font-weight: 500;
+    margin: 0;
+    letter-spacing: 6px;
+}
+
+.content p {
+    margin: 0;
+    font-size: 4vh;
+    margin-left: 10px;
+}
+
+.content button {
+    margin: 25px 10px;
+}
+
+.page-num {
+    position: absolute;
+    overflow-y: hidden;
+    right: -9%;
+    bottom: -35.238%;
+    font-size: 15rem;
+    color: #fff;
+    font-family: "Abril Fatface";
+    z-index: 200;
+}
+
+.page-num p {
+    line-height: 1.1;
+    text-shadow: 0 10px 30px rgba(2, 11, 22, 0.5);
+}
+
+/*@media (min-width: 1250px) {*/
+    /*.content h1 {*/
+        /*font-size: 12vh;*/
+        /*line-height: 9vh;*/
+    /*}*/
+/*}*/
+
+.contact a {
+    color: black;
+    text-decoration: none;
+}
+
+.contact p {
+    font-size: 2.7vh;
+}
+
+.contact a:hover {
+    color: #484848 !important;
+}
+
+.contact .social {
+    margin: 30px 0;
+}
+
+@media (max-width: 768px) {
+    .content h1 {
+        font-size: 7vh;
+        line-height: 6vh;
+        font-weight: 500;
+        margin: 0;
+    }
+
+    .content p {
+        margin: 0;
+        font-size: 3vh;
+    }
+
+    .content button {
+        margin: 25px 0;
+    }
+
+    .line-break {
+        margin-top: 1.2rem;
+        margin-bottom: 1.2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .banner-container {
+        left: 50%;
+    }
+
+    .page-num {
+        right: -4%;
+        bottom: -21.238%;
+        font-size: 4rem;
+    }
+
+    .top-card {
+        top: 0%;
+        right: 10%;
+        margin: 19% 1% 0 auto;
+        width: 80%;
+        height: 50.633%;
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+    }
+
+    .top-card img {
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+    }
+
+    .space-card, .space-card-tac, .space-card-about, .space-card-contact  {
+        width: 80%;
+        height: 49.633%;
+        top: 0%;
+        margin: 15% -4% 0 auto;
+    }
+
+    .content {
+        margin-left: 5%;
+        top: auto;
+        overflow: hidden;
+        bottom: 10%;
+        position: absolute;
+    }
+
+    .content h1 {
+        font-size: 7vh;
+        line-height: 6vh;
+        font-weight: 600;
+        margin: 0;
+    }
+
+    .content p {
+        margin: 5px 3px;
+        font-size: 3vh;
+    }
+
+    .content button {
+        margin: 10px 3px;
+    }
+
+    .line-break {
+        display: none;
+    }
+}
+
+.animated {
+    animation-duration: 1000ms;
+    animation-delay: 0ms;
+    animation-iteration-count: 1;
+}
+
+.about {
+    background: #000;
+}
+
+.about h1 {
+    margin: 0;
+    font-size: 17vh;
+    line-height: 0.8;
+    font-weight: 500;
+    color: rgba(102,102,102,0.25);
+}
+
+.about p {
+    font-size: 24px;
+    position: absolute;
+    width: 600px;
+    bottom: 0;
+    margin: 0;
+    color: white;
+    margin-left: 40px;
+    margin-bottom: 10px;
+}
+
+.about ul {
+    list-style-type: none;
+    margin: 0;
+}
+
+.about-skills {
+    display: flex;
+    position: absolute;
+    font-size: 24px;
+    bottom: 0;
+    margin-left: 40px;
+}
+
+.about-inner {
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px;
+    min-height: 400px;
+    position: relative;
+    color: white;
+}
+
+.education {
+    min-height: 315px !important;
+}
+
+.education-inner {
+    display: flex;
+    flex-direction: column;
+    margin-left: 40px;
+    font-size: 24px;
+    position: absolute;
+    bottom: 0;
+}
+
+.experience {
+    min-height: 570px !important;
+}
+
+.exp-inner {
+    display: flex;
+    flex-direction: column;
+    margin-left: 40px;
+    margin-top: 15px;
+    font-size: 24px;
+}
+
+.exp-outer {
+    position: absolute;
+    bottom: 0;
+}
+
+.flex-end {
+    align-items: flex-end;
+}
+
+@media(max-width: 768px) {
+    .about p {
+        position: relative;
+        width: auto;
+        margin-bottom: 0;
+    }
+    .about-skills {
+        position: relative;
+        bottom: auto;
+    }
+    .education-inner {
+        position: relative;
+        bottom: auto;
+    }
+    .exp-outer {
+        position: relative;
+        bottom: auto;
+    }
+    .about ul {
+        padding: 0;
+    }
+    .flex-end {
+        align-items: flex-start;
+    }
+}
+
+.page-transition-enter {
+    opacity: 0;
+}
+.page-transition-enter-active {
+    opacity: 1;
+    transition: opacity 300ms;
+}
+.page-transition-exit {
+    opacity: 1;
+}
+.page-transition-exit-active {
+    opacity: 0;
+    transition: opacity 300ms;
+}
+
+.hero {
+    display: flex;
+    min-height: 100vh;
+    justify-content: flex-end;
+    background: black;
+}
+
+.hero img {
+    width: 60.677%;
+    min-height: 100vh;
+    object-fit: cover;
+    object-position: center;
+    filter: brightness(87%);
+}
+
+.hero-content {
+    position: absolute;
+    top: 25%;
+    z-index: 10;
+    left: 10%;
+}
+
+.hero-content h1 {
+    color: white;
+    font-size: 12vh;
+    line-height: 0.8;
+    margin: 0;
+    font-weight: 500;
+}
+
+.hero-content p {
+    color: white;
+    font-size: 4vh;
+    margin: 0;
+}
+
+.hero-content button {
+    margin: 25px 0;
+    border: 1px solid white;
+}
+
+.hero-content button:before {
+    background: transparent;
+}
+
+.hero-content button:hover {
+    border: 1px solid white;
+}
+
+.hero-content button:hover .icon-right.after:after {
+    color: white;
+}
+
+.work .scrollDown {
+    color: white;
+}
+
+.work .scrollDown-disabled {
+
+}
+
+.work .scrollDown::after {
+    background: white;
+}
+
+.work .line-break span {
+    background: white;
+}
+
+@media (max-width: 576px) {
+    .hero-content {
+        top: auto;
+        bottom: 5%;
+    }
+
+    .hero-content h1 {
+        font-size: 8vh;
+        margin: 10px 0;
+    }
+
+    .hero-content p {
+        font-size: 3vh;
+    }
+
+    .hero img {
+        min-height: 60vh;
+        width: 100%;
+    }
+
+    .hero {
+        display: block;
+        justify-content: unset;
+    }
+}
+
+@media (max-width: 996px) {
+    .hero-content h1 {
+        font-size: 10vh;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 8vh !important;
+    }
+}
+
+.work-content {
+    background: -webkit-linear-gradient(#ebece7, white);
+    background: linear-gradient(#ebece7, white);
+}
+
+.work-content h1 {
+    margin: 0;
+    font-size: 17vh;
+    line-height: 0.8;
+    font-weight: 500;
+    color: rgba(102,102,102,0.25);
+}
+
+.work-content p {
+    font-size: 24px;
+    position: absolute;
+    width: 600px;
+    bottom: 0;
+    margin: 0;
+    color: #000;
+    margin-left: 40px;
+    margin-bottom: 10px;
+}
+
+.work-content ul {
+    list-style-type: none;
+    margin: 0;
+}
+
+.work-content-skills {
+    display: flex;
+    position: absolute;
+    font-size: 24px;
+    bottom: 0;
+    margin-left: 40px;
+}
+
+.work-content-inner {
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px;
+    min-height: 400px;
+    position: relative;
+    color: #000;
+}
+
+@media(max-width: 768px) {
+    .work-content p {
+        position: relative;
+        width: auto;
+        margin-bottom: 0;
+    }
+    .work-content-skills {
+        position: relative;
+        bottom: auto;
+    }
+    .work-content ul {
+        padding: 0;
+    }
+}
+
+.overview p {
+    max-width: 700px;
+    width: auto;
+}
+
+.dev p {
+    max-width: 900px;
+    width: auto;
+}
