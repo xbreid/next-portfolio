@@ -1,6 +1,6 @@
 import React from 'react';
 import Typist from 'react-typist';
-
+import Nebula from '../static/images/rainbow-nebula.jpg';
 
 export default class HomeSection extends React.Component {
   constructor(props) {
@@ -11,7 +11,7 @@ export default class HomeSection extends React.Component {
     return (
       <div className="section">
         <div className="banner-container">
-          <div className="title">BRANDON REID</div>
+          <div className="title" style={{backgroundImage:`url(${Nebula})`}}>BRANDON REID</div>
           <Typist startDelay={1250}>
             <span className="subtitle">Hi!</span>
             <Typist.Backspace count={3} delay={500} />

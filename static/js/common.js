@@ -2,7 +2,6 @@ $(document).ready(function() {
 
   function hashchanged(){
     var hash = location.hash.replace( /^#/, '' );
-    //your code
     if (hash === 'work') {
       $(".scrollDown").addClass("scrollDown-disabled");
     } else if (hash === 'contact') {

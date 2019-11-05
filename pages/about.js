@@ -20,7 +20,7 @@ export default class About extends React.Component {
           <section className="container">
             <div className="about-inner">
               <h1>About</h1>
-              <p>I'm a full stack developer specialized in React and Javascript, currently living in Dallas, Texas, where I have been going to school and working as a freelancer for the last 3 years. I work accross both back end and front end development, and prefer working in an agile work environment. </p>
+              <p>I'm a full stack developer specialized in Full Stack Web Development, currently living in Richmond, Virginia. Currently working as a Freelancer and full time developer for Mobelux. </p>
             </div>
             <div className="about-inner skills flex-end">
               <h1>Skills</h1>
@@ -39,8 +39,8 @@ export default class About extends React.Component {
                     <li>HTML5 / CSS3</li>
                     <li>Javascript</li>
                     <li>React / React Native</li>
-                    <li>PHP</li>
-                    <li>Wordpress</li>
+                    <li>Ruby / Rails</li>
+                    <li>Python / Django</li>
                     <li>SQL / NoSQL</li>
                   </ul>
                 </div>
@@ -59,7 +59,13 @@ export default class About extends React.Component {
               <h1>Work</h1>
               <div className="exp-outer">
                 <div className="exp-inner">
-                  <span>Feb 2018 - Current</span>
+                  <span>Nov 2018 - Current</span>
+                  <span>Full Stack Developer, Simple Media</span>
+                  <span>React | Django | Rails</span>
+                  <span>Richmond, VA</span>
+                </div>
+                <div className="exp-inner">
+                  <span>Feb 2018 - Oct 2018</span>
                   <span>Lead Developer, Simple Media</span>
                   <span>React | Wordpress | CosmicJS</span>
                   <span>Dallas, TX</span>
@@ -69,12 +75,6 @@ export default class About extends React.Component {
                   <span>Lead Developer, LevelTen Interactive</span>
                   <span>Drupal | Wordpress | Genesis</span>
                   <span>Dallas, TX</span>
-                </div>
-                <div className="exp-inner">
-                  <span>Dec 2016 - Jun 2017</span>
-                  <span>Research Assistant, UNT</span>
-                  <span>React | Android | Couchbase</span>
-                  <span>Denton, TX</span>
                 </div>
               </div>
             </div>
